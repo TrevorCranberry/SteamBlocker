@@ -1,0 +1,24 @@
+// Open the Steam Community page in a new tab
+window.open('https://steamcommunity.com/id/CliffordSteam', '_blank');
+
+// Set a delay before running the next commands
+setTimeout(() => {
+    // Call the ConfirmBlock function
+    ConfirmBlock();
+
+    // Click the green button
+    const greenButton = document.querySelector('.btn_green_steamui.btn_medium');
+    if (greenButton) {
+        greenButton.click();
+    } else {
+        console.log('Green button not found');
+    }
+
+    // Click the grey button
+    const greyButton = document.querySelector('.btn_grey_steamui.btn_medium');
+    if (greyButton) {
+        greyButton.click();
+    } else {
+        console.log('Grey button not found');
+    }
+}, 3000); // Adjust the delay as necessary (3000 ms = 3 seconds)
